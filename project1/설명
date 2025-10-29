@@ -1,0 +1,29 @@
+body (전체 배경)짙은 남색(#0c1a3e) 배경에 url('lightning.png')를 **고정된 바둑판식(repeat/fixed)**으로 사용하여 폭풍우 테마를 구현했습니다.header h1 (제목)글자를 흰색으로 하고, 밝은 파란색(#61dafb)의 text-shadow를 주어 네온사인 효과를 연출했습니다..container (메인 콘텐츠)번개 배경 위에서도 가독성을 높이기 위해 짙은 파란색 반투명(rgba(12, 26, 62, 0.85)) 배경을 적용하고, 밝은 파란색 테두리를 쳤습니다.nav a (네비게이션)스크롤해도 상단에 고정(position: sticky)되며, hover 시 #61dafb 색상으로 바뀌면서 box-shadow를 통해 마치 버튼에 전기가 흐르는 듯한 효과를 줍니다.article h2제목 아래에 밝은 파란색의 굵은 밑줄을 그어 정보 섹션을 명확히 구분합니다.article h3왼쪽에 굵은 파란색 세로줄(border-left)을 넣어 소제목을 강조합니다.article code (강조)포켓몬 이름이나 아이템 이름에 반투명한 파란색 배경을 주어 키워드를 눈에 띄게 합니다..pokedex-image중앙 이미지를 밝은 파란색 테두리로 감싸서 시선을 집중시키고 디자인 통일성을 유지합니다.📄 HTML (HyperText Markup Language) 소개: 구조HTML은 크게 Header, Navigation, Main Content, Footer의 4개 영역으로 나누어집니다. 이 구조는 제공해주신 초기 Raft 공략 사이트의 구조를 그대로 따르고 있습니다.1. <header> 영역HTML<header>
+    <h1>포켓몬 도감 : [타입 이름]</h1>
+</header>
+사이트의 가장 위쪽 제목을 표시합니다. (예: "포켓몬 도감 : 전기 타입")2. <nav> 영역 (네비게이션)HTML<nav>
+    <a href="index.html">메인</a>
+    <a href="pikachu.html" class="active">피카츄 (No.025)</a>
+    </nav>
+position: sticky를 사용하여 화면 상단에 고정됩니다.**파일 이름 기반의 링크(href="파일명.html")**를 사용하여 페이지 간의 이동을 가능하게 합니다.현재 페이지의 메뉴 항목에는 class="active"를 붙여 시각적으로 강조합니다.3. <main class="container"> 영역 (핵심 콘텐츠)이곳에서 포켓몬의 상세 정보가 담깁니다. 각 포켓몬 정보는 <article> 태그로 구분됩니다.HTML<main class="container">
+    <h1>No.025 피카츄 (Pikachu)</h1>
+    
+    <img src="..." class="pokedex-image">
+
+    <article id="info">
+        <h2>기본 정보</h2>
+        <ul>
+            <li><strong>분류:</strong> <code>쥐포켓몬</code></li>
+            </ul>
+    </article>
+
+    <article id="description">
+        <h2>도감 설명</h2>
+        <p>...</p>
+    </article>
+    </main>
+<article>: 정보의 개별 섹션(기본 정보, 진화 등)을 구조화합니다.<h2>와 <h3>: Raft 스타일의 시각적 구분자(밑줄, 세로선)를 가진 정보 제목으로 사용됩니다.<ul>, <ol>, <li>: 정보를 목록 형태로 정리하는 데 사용됩니다.4. <footer> 영역HTML<footer>
+    <p>&copy; 2025 Pika Pokedex Hub. All rights reserved.</p>
+    <p>이 사이트는 Pokémon 팬 사이트이며, Nintendo 또는 The Pokémon Company와 관련이 없습니다.</p>
+</footer>
+사이트의 저작권 정보 및 고지 사항을 포함하는 최하단 영역입니다.
