@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬 도감 | No.025 피카츄</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS (디자인) 코드
+          사이트의 모든 스타일을 이곳에서 관리합니다.
+        */
 
+        /* 기본 설정 */
+        * {
+            box-sizing: border-box; /* 크기 계산을 쉽게 함 */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* === 1. 파란색 배경 === */
+            background-color: #0c1a3e; /* 짙은 남색 배경 (이미지 로딩 전) */
+            
+            /* === 2. 번개 무늬 이미지 === */
+            /* [중요] 'lightning.png' 파일이 같은 폴더에 있어야 합니다. */
+            background-image: url('lightning.png');
+            
+            background-repeat: repeat; /* 이미지를 바둑판식으로 반복 */
+            background-attachment: fixed; /* 스크롤해도 배경은 고정 */
+            
+            /* 기본 글꼴 설정 */
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #e0e0e0; /* 기본 글자색 (밝은 회색) */
+            line-height: 1.7; /* 줄 간격 */
+        }
+
+        /* === 헤더 (사이트 제목) === */
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #61dafb; /* 번개 느낌의 밝은 파란색 테두리 */
+        }
+        
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #61dafb; /* 네온사인 효과 */
+        }
+
+        /* === 네비게이션 메뉴 === */
+        nav {
+            background-color: #081428; /* 헤더보다 살짝 어두운 색 */
+            padding: 15px;
+            text-align: center;
+            position: sticky; /* 스크롤 시 상단에 고정 */
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 700;
+            margin: 0 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* 메뉴에 마우스를 올렸을 때 */
+        nav a:hover, nav a.active {
+            background-color: #61dafb;
+            color: #0c1a3e;
+            box-shadow: 0 0 15px #61dafb;
+        }
+
+        /* === 메인 콘텐츠 영역 === */
+        .container {
+            max-width: 1000px; /* 콘텐츠 최대 넓이 */
+            margin: 30px auto; /* 중앙 정렬 */
+            
+            /* 가독성을 위한 반투명 배경 */
+            background-color: rgba(12, 26, 62, 0.85); /* 짙은 파란색 반투명 */
+            border: 1px solid rgba(97, 218, 251, 0.3);
+            
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* === 사진(퀴즈) 구조용 이미지 스타일 (추가) === */
+        .pokedex-image {
+            display: block;
+            margin: 10px auto 30px auto; /* 위아래 여백 및 중앙 정렬 */
+            max-width: 300px; /* 이미지 최대 크기 */
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #61dafb; /* Raft 테마에 맞는 테두리 */
+            background-color: rgba(255, 255, 255, 0.1); /* 살짝 밝은 배경 */
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.5);
+        }
+
+        /* === 공략 본문 스타일 (Raft 코드) === */
+        article {
+            margin-bottom: 50px; /* 정보 섹션 사이의 간격 */
+            border-bottom: 1px dashed rgba(97, 218, 251, 0.5); /* 구분선 */
+            padding-bottom: 30px;
+        }
+        article:last-child {
+            margin-bottom: 0;
+            border-bottom: none; /* 마지막 항목은 구분선 제거 */
+        }
+        
+        /* 정보 제목 (h2) */
+        article h2 {
+            font-size: 2em;
+            color: #61dafb; /* 밝은 파란색 */
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 소제목 (h3) */
+        article h3 {
+            font-size: 1.4em;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-left: 5px solid #61dafb;
+            padding-left: 10px;
+        }
+
+        /* 목록 (ul, ol) */
+        article ul, article ol {
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        article li {
+            margin-bottom: 10px;
+        }
+        
+        /* 키워드 강조 (Raft 코드) */
+        article code {
+            background-color: rgba(97, 218, 251, 0.2);
+            color: #f0f0f0;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+
+        /* (Raft 코드의 img 스타일은 .pokedex-image로 대체) */
+
+        /* === 푸터 (하단 정보) === */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #081428;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>포켓몬 도감 : 전기 타입</h1>
+    </header>
+
+    <nav>
+        <a href="#pikachu" class="active">피카츄 (No.025)</a>
+        <a href="#raichu">라이츄 (진화)</a>
+        <a href="#charmander">파이리 (No.004)</a>
+        <a href="#squirtle">꼬부기 (No.007)</a>
+    </nav>
+
+    <main class="container">
+        
+        <h1 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">
+            No.025 피카츄 (Pikachu)
+        </h1>
+
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="피카츄 공식 이미지" class="pokedex-image">
+
+        <article id="info">
+            <h2>기본 정보</h2>
+            <ul>
+                <li><strong>분류:</strong> <code>쥐포켓몬</code></li>
+                <li><strong>타입:</strong> <code>전기</code></li>
+                <li><strong>키:</strong> 0.4 m</li>
+                <li><strong>몸무게:</strong> 6.0 kg</li>
+                <li><strong>특성:</strong> <code>정전기</code> (숨겨진 특성: <code>피뢰침</code>)</li>
+            </ul>
+        </article>
+
+        <article id="description">
+            <h2>도감 설명</h2>
+            <p>양 볼에 있는 전기 주머니에 전기를 모아 둡니다. 화가 나면 모아 둔 전기를 한꺼번에 방출합니다.</p>
+            <p>처음 보는 것에는 전기를 내뿜습니다. 검게 탄 나무 열매가 떨어져 있다면 그것은 피카츄가 전기의 세기를 잘못 조절했다는 증거입니다.</p>
+        </article>
+
+        <article id="evolution">
+            <h2>진화</h2>
+            <p>피카츄의 진화 단계는 다음과 같습니다.</p>
+            <ol>
+                <li><code>피츄</code> (기본)</li>
+                <li>→ (친밀도를 높여 레벨업) → <strong><code>피카츄</code></strong></li>
+                <li>→ (<code>천둥의 돌</code> 사용) → <code>라이츄</code></li>
+                <li>→ (알로라 지방에서 <code>천둥의 돌</code> 사용) → <code>알로라 라이츄</code></li>
+            </ol>
+        </article>
+        
+        <article id="moves">
+            <h2>주요 기술</h2>
+            <p>피카츄가 배울 수 있는 대표적인 기술들입니다.</p>
+            <ul>
+                <li><code>10만볼트</code> (전기 / 특수)</li>
+                <li><code>볼트태클</code> (전기 / 물리) - *전용기*</li>
+                <li><code>전광석화</code> (노말 / 물리)</li>
+                <li><code>아이언테일</code> (강철 / 물리)</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pika Pokedex Hub. All rights reserved.</p>
+        <p>이 사이트는 Pokémon 팬 사이트이며, Nintendo 또는 The Pokémon Company와 관련이 없습니다.</p>
+    </footer>
+
+</body>
+</html>
