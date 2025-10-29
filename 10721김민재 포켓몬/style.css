@@ -1,0 +1,233 @@
+/* style.css (세련된 포켓몬 테마) */
+
+/* ======================================= */
+/* 1. 기본 설정 (Reset & Common) */
+/* ======================================= */
+
+:root {
+    /* 포켓몬 팔레트 */
+    --color-red: #E3350D;       /* 몬스터볼 빨강 */
+    --color-blue: #3C5AA6;      /* 포켓몬 로고 파랑 */
+    --color-yellow: #FFCB05;    /* 피카츄 노랑/골드 */
+    --color-dark: #2A1A1E;      /* 진한 검정 */
+    --color-light: #F7F7F7;     /* 밝은 회색 */
+    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --shadow-deep: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-light) 0%, #dcdcdc 100%); /* 그라데이션 배경 */
+    min-height: 100vh;
+}
+
+/* 제목 스타일 (메인 및 개별 페이지 공통) */
+h1 {
+    color: var(--color-dark);
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow-deep);
+    display: inline-block;
+    border: 3px solid var(--color-dark);
+    text-transform: uppercase;
+}
+
+/* 이미지 공통 스타일 */
+img {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid var(--color-dark);
+    border-radius: 10px;
+    box-shadow: var(--shadow-deep);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 203, 5, 0.8); /* 노란색 하이라이트 */
+}
+
+/* ======================================= */
+/* 2. 메인 페이지 스타일 (10721 김민재 포켓몬.html) */
+/* ======================================= */
+
+.main-page .content-wrapper {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: var(--shadow-deep);
+}
+
+.main-page h1 {
+    color: var(--color-red);
+    border-color: var(--color-blue);
+}
+
+.main-page p {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--color-dark);
+    margin-bottom: 40px;
+}
+
+.main-page .main-img {
+    border-color: var(--color-yellow);
+    border-width: 8px;
+    border-radius: 50%; /* 원형으로 변경 */
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* 리스트 스타일 */
+.main-page ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* 가로 배치 */
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-page li {
+    flex: 1;
+    max-width: 250px;
+    padding: 20px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    border: 2px solid var(--color-blue);
+    transition: all 0.3s;
+}
+
+.main-page li:hover {
+    background-color: var(--color-yellow);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 203, 5, 0.5);
+}
+
+/* 링크 스타일 */
+.main-page a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 1.4em;
+    display: block;
+}
+
+.main-page a:hover {
+    color: var(--color-red);
+}
+
+
+/* ======================================= */
+/* 3. 제라오라 페이지 스타일 (Zeraora.html) */
+/* ======================================= */
+
+.zeraora-page {
+    background-color: #ffe08a; /* 밝은 노란색 배경 */
+}
+
+.zeraora-page .pokemon-card {
+    background-color: #ffffff;
+    border: 5px solid var(--color-dark);
+    box-shadow: var(--shadow-deep);
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.zeraora-page h1 {
+    color: var(--color-yellow);
+    background-color: var(--color-dark);
+    border-color: var(--color-yellow);
+    text-shadow: none;
+}
+
+.zeraora-page img {
+    border-color: var(--color-yellow);
+    border-width: 8px;
+    border-radius: 15px;
+}
+
+.zeraora-page p {
+    font-size: 1.2em;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: var(--color-light);
+    border-left: 5px solid var(--color-yellow);
+    text-align: left;
+}
+
+.zeraora-page p:last-of-type {
+    font-weight: bold;
+    color: var(--color-red);
+    background-color: transparent;
+    border: none;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+
+/* ======================================= */
+/* 4. 조로아크 페이지 스타일 (Zoroark.html) */
+/* ======================================= */
+
+.zoroark-page {
+    background-color: #5d4872; /* 어두운 보라색 배경 */
+    color: var(--color-light);
+}
+
+.zoroark-page .pokemon-card {
+    background-color: #3b2a4c;
+    border: 5px solid #cc00cc; /* 마젠타 테두리 */
+    box-shadow: var(--shadow-deep);
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.zoroark-page h1 {
+    color: #cc00cc;
+    background-color: var(--color-dark);
+    border-color: #cc00cc;
+    text-shadow: none;
+}
+
+.zoroark-page img {
+    border-color: #cc00cc;
+    border-width: 8px;
+    border-radius: 15px;
+}
+
+.zoroark-page p {
+    font-size: 1.2em;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-left: 5px solid #cc00cc;
+    text-align: left;
+}
+
+.zoroark-page p:last-of-type {
+    font-weight: bold;
+    color: var(--color-yellow);
+    background-color: transparent;
+    border: none;
+    font-size: 1.6em;
+    text-align: center;
+}
