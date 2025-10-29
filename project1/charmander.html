@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬 도감 | No.004 파이리</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS (디자인) 코드 (피카츄 도감과 동일하게 유지) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0c1a3e;
+            background-image: url('lightning.png'); /* lightning.png 필요 */
+            background-repeat: repeat;
+            background-attachment: fixed;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #61dafb;
+        }
+        
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #61dafb;
+        }
+
+        nav {
+            background-color: #081428;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 700;
+            margin: 0 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #61dafb;
+            color: #0c1a3e;
+            box-shadow: 0 0 15px #61dafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: rgba(12, 26, 62, 0.85);
+            border: 1px solid rgba(97, 218, 251, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .pokedex-image {
+            display: block;
+            margin: 10px auto 30px auto;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #61dafb;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.5);
+        }
+
+        article {
+            margin-bottom: 50px;
+            border-bottom: 1px dashed rgba(97, 218, 251, 0.5);
+            padding-bottom: 30px;
+        }
+        article:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        
+        article h2 {
+            font-size: 2em;
+            color: #61dafb;
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        article h3 {
+            font-size: 1.4em;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-left: 5px solid #61dafb;
+            padding-left: 10px;
+        }
+
+        article ul, article ol {
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        article li {
+            margin-bottom: 10px;
+        }
+        
+        article code {
+            background-color: rgba(97, 218, 251, 0.2);
+            color: #f0f0f0;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #081428;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>포켓몬 도감 : 불꽃 타입</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">메인</a>
+        <a href="pikachu.html">피카츄 (No.025)</a>
+        <a href="raichu.html">라이츄 (No.026)</a>
+        <a href="charmander.html" class="active">파이리 (No.004)</a>
+        <a href="squirtle.html">꼬부기 (No.007)</a>
+    </nav>
+
+    <main class="container">
+        
+        <h1 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">
+            No.004 파이리 (Charmander)
+        </h1>
+
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_nRyQj12RMJkQ3xQ0Nd5sNOqEq8570HMj5EhJxKcvzAoA=s900-c-k-c0x00ffffff-no-rj" alt="파이리 공식 이미지" class="pokedex-image">
+
+        <article id="info">
+            <h2>기본 정보</h2>
+            <ul>
+                <li><strong>분류:</strong> <code>도롱뇽포켓몬</code></li>
+                <li><strong>타입:</strong> <code>불꽃</code></li>
+                <li><strong>키:</strong> 0.6 m</li>
+                <li><strong>몸무게:</strong> 8.5 kg</li>
+                <li><strong>특성:</strong> <code>맹화</code> (숨겨진 특성: <code>선파워</code>)</li>
+            </ul>
+        </article>
+
+        <article id="description">
+            <h2>도감 설명</h2>
+            <p>꼬리의 불꽃은 파이리의 생명력입니다. 불꽃이 꺼지면 그 생명도 끝이 납니다.</p>
+            <p>뜨거운 것을 좋아한다. 비가 내리면 꼬리에서 연기가 나고 추운 곳에서는 불꽃의 기세가 약해진다.</p>
+        </article>
+
+        <article id="evolution">
+            <h2>진화</h2>
+            <p>파이리의 진화 단계는 다음과 같습니다.</p>
+            <ol>
+                <li><strong><code>파이리</code></strong> (기본)</li>
+                <li>→ (Lv.16) → <code>리자드</code></li>
+                <li>→ (Lv.36) → <code>리자몽</code></li>
+                <li>→ (메가스톤 사용) → <code>메가리자몽X</code> 또는 <code>메가리자몽Y</code></li>
+            </ol>
+        </article>
+        
+        <article id="moves">
+            <h2>주요 기술</h2>
+            <p>파이리가 배울 수 있는 대표적인 기술들입니다.</p>
+            <ul>
+                <li><code>화염방사</code> (불꽃 / 특수)</li>
+                <li><code>드래곤클로</code> (드래곤 / 물리)</li>
+                <li><code>불대문자</code> (불꽃 / 특수)</li>
+                <li><code>깨물어부수기</code> (악 / 물리)</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pika Pokedex Hub. All rights reserved.</p>
+        <p>이 사이트는 Pokémon 팬 사이트이며, Nintendo 또는 The Pokémon Company와 관련이 없습니다.</p>
+    </footer>
+
+</body>
+</html>

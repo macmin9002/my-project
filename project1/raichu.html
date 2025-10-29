@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포켓몬 도감 | No.026 라이츄</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS (디자인) 코드 (피카츄 도감과 동일하게 유지) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0c1a3e;
+            background-image: url('lightning.png'); /* lightning.png 필요 */
+            background-repeat: repeat;
+            background-attachment: fixed;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #61dafb;
+        }
+        
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #61dafb;
+        }
+
+        nav {
+            background-color: #081428;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 700;
+            margin: 0 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #61dafb;
+            color: #0c1a3e;
+            box-shadow: 0 0 15px #61dafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: rgba(12, 26, 62, 0.85);
+            border: 1px solid rgba(97, 218, 251, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .pokedex-image {
+            display: block;
+            margin: 10px auto 30px auto;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #61dafb;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(97, 218, 251, 0.5);
+        }
+
+        article {
+            margin-bottom: 50px;
+            border-bottom: 1px dashed rgba(97, 218, 251, 0.5);
+            padding-bottom: 30px;
+        }
+        article:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+        
+        article h2 {
+            font-size: 2em;
+            color: #61dafb;
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        article h3 {
+            font-size: 1.4em;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-left: 5px solid #61dafb;
+            padding-left: 10px;
+        }
+
+        article ul, article ol {
+            margin-left: 20px;
+            padding-left: 15px;
+        }
+
+        article li {
+            margin-bottom: 10px;
+        }
+        
+        article code {
+            background-color: rgba(97, 218, 251, 0.2);
+            color: #f0f0f0;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #081428;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>포켓몬 도감 : 전기 타입</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">메인</a>
+        <a href="pikachu.html">피카츄 (No.025)</a>
+        <a href="raichu.html" class="active">라이츄 (No.026)</a>
+        <a href="charmander.html">파이리 (No.004)</a>
+        <a href="squirtle.html">꼬부기 (No.007)</a>
+    </nav>
+
+    <main class="container">
+        
+        <h1 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">
+            No.026 라이츄 (Raichu)
+        </h1>
+
+        <img src="https://tse1.mm.bing.net/th/id/OIP.OnRyWH8c9Th58mAywwlY6wHaEO?rs=1&pid=ImgDetMain&o=7&rm=3" alt="라이츄 공식 이미지" class="pokedex-image">
+
+        <article id="info">
+            <h2>기본 정보</h2>
+            <ul>
+                <li><strong>분류:</strong> <code>쥐포켓몬</code></li>
+                <li><strong>타입:</strong> <code>전기</code> (알로라 폼: <code>전기 / 에스퍼</code>)</li>
+                <li><strong>키:</strong> 0.8 m (알로라 폼: 0.7 m)</li>
+                <li><strong>몸무게:</strong> 30.0 kg (알로라 폼: 21.0 kg)</li>
+                <li><strong>특성:</strong> <code>정전기</code> (알로라 폼: <code>서핑테일</code>)</li>
+            </ul>
+        </article>
+
+        <article id="description">
+            <h2>도감 설명</h2>
+            <p>천만 볼트의 전기를 모을 수 있다. 꼬리를 땅에 대고 방전하지 않으면 자신이 마비되어 버린다.</p>
+            <p>전기를 모으는 능력이 피카츄보다 강하다. 방전량도 커서 어설픈 상대를 한 방에 쓰러뜨린다.</p>
+        </article>
+
+        <article id="evolution">
+            <h2>진화</h2>
+            <p>라이츄의 진화 단계는 다음과 같습니다.</p>
+            <ol>
+                <li><code>피츄</code> (기본)</li>
+                <li>→ (친밀도를 높여 레벨업) → <code>피카츄</code></li>
+                <li>→ (<code>천둥의 돌</code> 사용) → <strong><code>라이츄</code></strong> (관동의 모습)</li>
+                <li>→ (알로라 지방에서 <code>천둥의 돌</code> 사용) → <strong><code>알로라 라이츄</code></strong></li>
+            </ol>
+        </article>
+        
+        <article id="moves">
+            <h2>주요 기술</h2>
+            <p>라이츄가 배울 수 있는 대표적인 기술들입니다.</p>
+            <ul>
+                <li><code>10만볼트</code> (전기 / 특수)</li>
+                <li><code>사이코키네시스</code> (에스퍼 / 특수) - *알로라 라이츄만*</li>
+                <li><code>번개펀치</code> (전기 / 물리)</li>
+                <li><code>볼트체인지</code> (전기 / 특수)</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pika Pokedex Hub. All rights reserved.</p>
+        <p>이 사이트는 Pokémon 팬 사이트이며, Nintendo 또는 The Pokémon Company와 관련이 없습니다.</p>
+    </footer>
+
+</body>
+</html>
