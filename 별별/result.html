@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>추천 수면시간 결과</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky-bg"></div>
+  <div class="sky-overlay"></div>
+
+  <main class="app">
+    <section class="page page--active">
+      <div class="card card--result">
+        <button class="btn btn--ghost" onclick="location.href='index.html'">
+          ← 처음으로
+        </button>
+
+        <h2 class="result-title">이때 잠드는걸 추천드려요!</h2>
+        <p class="result-subtitle" id="result-desc"></p>
+
+        <p class="tolerance-note">
+          ※ 실제로 잠드는 시간과 개인 수면 패턴에 따라<br />
+          약 <strong>±15분</strong> 정도 오차가 있을 수 있어요.
+        </p>
+
+        <div class="time-list" id="time-list"></div>
+
+        <p class="copy-hint">
+          시간을 클릭하면 그 시간에 맞춰<br />
+          웹에서 “주무실 시간입니다!” 라고 알려드려요 ✨
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 잠들 시간 안내 모달 -->
+  <div id="sleep-modal" class="modal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__content">
+      <h3 class="modal__title">잠들 시간을 안내 받으시겠어요?</h3>
+      <p class="modal__text">
+        선택하신
+        <span id="modal-time" class="modal__time">--:--</span>
+        에<br />
+        웹에서 “주무실 시간입니다!” 라고 알려드릴게요.
+      </p>
+      <p class="modal__note">
+        이 페이지를 닫지 않고 켜 두셔야 알림이 뜹니다.
+      </p>
+      <div class="modal__actions">
+        <button class="btn btn--ghost modal__btn-cancel" id="modal-no">취소</button>
+        <button class="btn btn--primary modal__btn-yes" id="modal-yes">예</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="result.js" defer></script>
+</body>
+</html>

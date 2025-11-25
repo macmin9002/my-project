@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>여러분의 최적화된 수면시간</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 밤하늘 배경 -->
+  <div class="sky-bg"></div>
+  <div class="sky-overlay"></div>
+
+  <main class="app">
+    <section class="page page--active">
+      <div class="card card--input">
+        <h1 class="title">
+          여러분의<br />
+          최적화된 수면시간
+        </h1>
+        <p class="subtitle">일어나야 하는 시간을 작성하세요!</p>
+
+        <form id="wake-form" class="form">
+          <label class="field">
+            <span class="field__label">기상 시간</span>
+            <div class="field__input-row">
+              <input
+                id="wake-time"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                class="field__input"
+                placeholder="예: 6시 30분 / 06:30 / 630"
+              />
+              <button type="submit" class="btn btn--primary">
+                계산하기
+              </button>
+            </div>
+          </label>
+          <p class="hint">
+            수면 주기(약 90분)와 잠드는 시간(약 14분)을 기준으로<br />
+            개운하게 일어날 수 있는 잠드는 시간을 계산해드려요.
+          </p>
+          <p class="error-message" id="error-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js" defer></script>
+</body>
+</html>

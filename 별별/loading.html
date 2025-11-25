@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>수면시간 계산 중...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky-bg"></div>
+  <div class="sky-overlay"></div>
+
+  <main class="app">
+    <section class="page page--active">
+      <div class="card card--loading">
+        <!-- 반짝이는 파티클 -->
+        <div class="sparkle-container">
+          <span class="sparkle"></span>
+          <span class="sparkle"></span>
+          <span class="sparkle"></span>
+          <span class="sparkle"></span>
+          <span class="sparkle"></span>
+          <span class="sparkle"></span>
+        </div>
+
+        <h2 class="loading-title">수면시간을 계산하는 중입니다.....</h2>
+        <p class="loading-desc" id="loading-desc">
+          입력하신 기상 시간을 기준으로<br />
+          수면 주기를 정교하게 맞추고 있어요.
+        </p>
+
+        <p class="tolerance-note loading-tolerance">
+          ※ 실제로 잠드는 시간과 개인 수면 패턴에 따라<br />
+          약 <strong>±15분</strong> 정도 오차가 있을 수 있어요.
+        </p>
+
+        <div class="loader-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="loading.js" defer></script>
+</body>
+</html>
